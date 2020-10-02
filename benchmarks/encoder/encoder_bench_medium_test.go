@@ -5,8 +5,8 @@ import (
 	"log"
 	"testing"
 
-	"github.com/francoispqt/gojay"
-	"github.com/francoispqt/gojay/benchmarks"
+	"github.com/Yohanson555/gojay"
+	"github.com/Yohanson555/gojay/benchmarks"
 	jsoniter "github.com/json-iterator/go"
 	"github.com/mailru/easyjson"
 )

@@ -1,7 +1,7 @@
 package fuzz
 
 import (
-	"github.com/francoispqt/gojay"
+	"github.com/Yohanson555/gojay"
 )
 
 type user struct {

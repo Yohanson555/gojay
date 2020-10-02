@@ -1,7 +1,7 @@
 package client
 
 import (
-	"github.com/francoispqt/gojay/examples/websocket/comm"
+	"github.com/Yohanson555/gojay/examples/websocket/comm"
 	"golang.org/x/net/websocket"
 )
 
