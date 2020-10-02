@@ -40,6 +40,11 @@ func newDecoderPool() interface{} {
 func BorrowDecoder(r io.Reader) *Decoder {
 	return borrowDecoder(r, 512)
 }
+
+func BorrowSizedDecoder(r io.Reader, bufSize int) *Decoder {
+	return borrowDecoder(r, bufSize)
+}
+
 func borrowDecoder(r io.Reader, bufSize int) *Decoder {
 	dec := decPool.Get().(*Decoder)
 	dec.called = 0
