@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/Yohanson555/gojay"
-	"github.com/Yohanson555/gojay/benchmarks"
 	"github.com/buger/jsonparser"
+	"github.com/francoispqt/gojay"
+	"github.com/francoispqt/gojay/benchmarks"
 	jsoniter "github.com/json-iterator/go"
 	"github.com/mailru/easyjson"
 )

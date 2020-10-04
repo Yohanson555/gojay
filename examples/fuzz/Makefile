@@ -1,6 +1,6 @@
 .PHONY: gofuzzbuild
 gofuzzbuild: 
-	go-fuzz-build github.com/Yohanson555/gojay/examples/fuzz
+	go-fuzz-build github.com/francoispqt/gojay/examples/fuzz
 
 .PHONY: gofuzz
 gofuzz: 

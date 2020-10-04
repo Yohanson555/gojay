@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-const gojayPackage = "github.com/Yohanson555/gojay"
+const gojayPackage = "github.com/francoispqt/gojay"
 
 // Generator holds the content to generate the gojay code
 type Generator struct {

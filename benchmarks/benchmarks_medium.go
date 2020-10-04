@@ -1,6 +1,6 @@
 package benchmarks
 
-import "github.com/Yohanson555/gojay"
+import "github.com/francoispqt/gojay"
 
 // Response from Clearbit API. Size: 2.4kb
 var MediumFixture = []byte(`{

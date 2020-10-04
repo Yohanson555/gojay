@@ -5,7 +5,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/Yohanson555/gojay"
+	"github.com/francoispqt/gojay"
 )
 
 func ExampleUnmarshal_string() {

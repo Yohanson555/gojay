@@ -3,6 +3,8 @@ package gojay
 import (
 	"fmt"
 	"io"
+
+	"github.com/valyala/bytebufferpool"
 )
 
 // UnmarshalJSONArray parses the JSON-encoded data and stores the result in the value pointed to by v.
@@ -40,6 +42,35 @@ func UnmarshalJSONObject(data []byte, v UnmarshalerJSONObject) error {
 	copy(dec.data, data)
 	dec.length = len(data)
 	_, err := dec.decodeObject(v)
+	if err != nil {
+		return err
+	}
+	if dec.err != nil {
+		return dec.err
+	}
+	return nil
+}
+
+// UnmarshalJSONObjectWithPool Same as UnmarshalJSONObject but with using of bytebufferpool to get less memory allocations
+//
+// v must implement UnmarshalerJSONObject.
+//
+func UnmarshalJSONObjectWithPool(data []byte, v UnmarshalerJSONObject) error {
+	dec := borrowDecoder(nil, 0)
+
+	defer dec.Release()
+
+	bb := bytebufferpool.Get()
+	bb.Write(data)
+
+	defer bytebufferpool.Put(bb)
+
+	dec.data = bb.B
+
+	dec.length = len(data)
+
+	_, err := dec.decodeObject(v)
+
 	if err != nil {
 		return err
 	}

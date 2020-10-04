@@ -4,7 +4,7 @@ package annotated_struct
 
 import (
 	"database/sql"
-	"github.com/Yohanson555/gojay"
+	"github.com/francoispqt/gojay"
 	"time"
 )
 
